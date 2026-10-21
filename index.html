@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>엔보이 기독교 투어 상품 소개서 V2 | Partner Preview</title>
+<style>
+:root{
+  --bg:#f3f0e9; --paper:#fffdf9; --text:#25231f; --muted:#746e64; --line:#ddd6ca;
+  --accent:#806447; --accent2:#b89e7e; --dark:#1f2b25; --soft:#f7f2e8; --gold:#b8863b;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,253,249,.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(221,214,202,.9)}
+.nav{height:64px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{font-weight:800;letter-spacing:.3px}.brand small{display:block;font-size:11px;color:var(--muted);font-weight:500}
+.navlinks{display:flex;gap:16px;font-size:13px;color:#4e4941}.badge-review{border:1px solid #c88f37;color:#7c5415;background:#fff4df;padding:7px 10px;border-radius:999px;font-size:12px;font-weight:800}
+.hero{min-height:720px;color:#fff;display:flex;align-items:flex-end;background:
+linear-gradient(180deg,rgba(16,22,18,.08),rgba(16,22,18,.78)),
+url('https://commons.wikimedia.org/wiki/Special:FilePath/Khor_Virap._Ararat.jpg?width=2000') center 43%/cover no-repeat}
+.hero-inner{width:100%;padding:110px 24px 72px;max-width:1200px;margin:0 auto}
+.kicker{font-size:13px;letter-spacing:1.8px;text-transform:uppercase;color:#eee4d4;margin-bottom:12px}
+.hero h1{font-size:56px;line-height:1.06;margin:0 0 16px;max-width:920px;letter-spacing:-1.6px}
+.hero .en{font-size:22px;color:#efe9df;margin-bottom:18px}.tagline{font-size:25px;margin:0 0 30px}
+.meta{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px}.chip{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.28);font-size:13px}
+.hero-bottom{display:flex;gap:18px;align-items:stretch;flex-wrap:wrap}
+.price-card{background:#fff;color:var(--text);border-radius:18px;padding:22px 24px;min-width:360px;box-shadow:0 16px 40px rgba(0,0,0,.18)}
+.price-label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.9px}.price{font-size:35px;font-weight:900;letter-spacing:-1px}
+.status{display:inline-block;padding:4px 8px;border-radius:999px;background:#fff1d4;color:#83530b;font-size:11px;font-weight:800;vertical-align:middle;margin-left:7px}
+.price-note{font-size:12px;color:var(--muted);margin-top:5px}
+.hero-summary{background:rgba(31,43,37,.86);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.18);border-radius:18px;padding:20px 22px;max-width:510px}
+.hero-summary b{display:block;font-size:15px;margin-bottom:6px}.hero-summary p{margin:0;color:#e2e6e3;font-size:14px}
+.section{padding:74px 0}.section.white{background:var(--paper)}.section.dark{background:var(--dark);color:#fff}
+.section h2{font-size:34px;margin:0 0 14px;letter-spacing:-.6px}.lead{color:var(--muted);max-width:920px;margin:0 0 32px}.dark .lead{color:#cfd6d2}
+.internal-note{background:#fff5e4;border:1px solid #ead0a3;padding:18px 20px;border-radius:14px;margin-bottom:30px;font-size:14px}
+.quick{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}.quick .q{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;min-height:112px}.q .label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.8px}.q .value{font-size:17px;font-weight:800;margin-top:6px}
+.intro-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px}.intro-card,.partner-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px}.intro-card p,.partner-card p{margin:0 0 12px;color:#575248}.intro-card p:last-child,.partner-card p:last-child{margin-bottom:0}.intro-card h3,.partner-card h3{margin:0 0 12px}
+.partner-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.partner-point{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px}.partner-point h3{margin:0 0 8px;font-size:18px}.partner-point p{margin:0;color:#5d584f;font-size:14px}
+.why{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.why .item{background:#fff;border:1px solid var(--line);border-radius:16px;padding:21px;min-height:190px}.why .n{font-size:12px;color:var(--accent);font-weight:900}.why h3{font-size:18px;margin:8px 0}.why p{margin:0;color:#5d584f;font-size:14px}
+.full-photo{min-height:390px;border-radius:22px;background-size:cover;background-position:center;position:relative;overflow:hidden;box-shadow:0 18px 42px rgba(54,46,36,.13);margin-top:34px}.full-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.02),rgba(0,0,0,.62))}.caption{position:absolute;z-index:2;left:28px;right:28px;bottom:24px;color:#fff}.caption h3{margin:0 0 6px;font-size:28px}.caption p{margin:0;max-width:760px;color:#eee}
+.story{display:grid;grid-template-columns:105px 1fr;gap:18px;padding:21px 0;border-bottom:1px solid var(--line)}.story:last-child{border-bottom:0}.step{font-size:12px;color:var(--accent);font-weight:900}.story h3{margin:0 0 5px;font-size:21px}.story p{margin:0;color:#58534b}
+.experiences{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}.exp{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px}.exp h3{margin:0 0 8px;font-size:17px}.exp p{margin:0;color:#5e594f;font-size:14px}
+.itinerary{display:flex;flex-direction:column;gap:10px}.day{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}.day button{width:100%;border:0;background:#fff;text-align:left;padding:17px 18px;display:grid;grid-template-columns:84px 1fr 22px;gap:14px;align-items:center;font:inherit;color:inherit;cursor:pointer}.day .d{font-weight:900;color:var(--accent)}.day .title{font-weight:800}.day .body{display:none;padding:0 18px 18px 116px;color:#5b564e}.day.open .body{display:block}.day.open .plus{transform:rotate(45deg)}.plus{transition:.2s;font-size:20px}
+.day-media{display:grid;grid-template-columns:180px 1fr;gap:16px;align-items:start;margin-top:12px}.thumb{height:118px;border-radius:12px;background-size:cover;background-position:center}
+.stay-grid,.taste-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.stay,.taste{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}.stay .img,.taste .img{height:180px;background-size:cover;background-position:center}.stay .body,.taste .body{padding:18px}.stay h3,.taste h3{margin:0 0 7px}.stay p,.taste p{margin:0;color:#5d584f;font-size:14px}
+.keylist{counter-reset:item;display:grid;grid-template-columns:1fr 1fr;gap:18px}.key{position:relative;background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 22px 22px 58px}.key:before{counter-increment:item;content:counter(item);position:absolute;left:20px;top:20px;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:var(--dark);color:#fff;font-size:12px;font-weight:800}.key h3{margin:0 0 7px;font-size:18px}.key p{margin:0;color:#5d584f}
+.price-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:22px}.price-box,.cost-box{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px}.price-box .big{font-size:38px;font-weight:900}.line-item{display:flex;justify-content:space-between;gap:20px;padding:10px 0;border-bottom:1px solid var(--line)}.line-item:last-child{border-bottom:0}
+.info-table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;overflow:hidden}.info-table th,.info-table td{padding:14px 16px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.info-table th{width:240px;background:#f8f4ed;font-size:13px}
+.inc-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.inc{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px}.inc h3{margin:0 0 12px}.inc p{margin:8px 0;color:#514c44}
+.reviews{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}.review-card{background:#fff;border:1px dashed #bdb5a7;border-radius:16px;padding:26px}.review-card h3{margin:0 0 8px}.review-card p{margin:0;color:#625d54}
+.forwho{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.who{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;font-weight:700}
+.cta{background:var(--dark);color:#fff;border-radius:22px;padding:34px;display:flex;justify-content:space-between;gap:24px;align-items:center}.cta h3{font-size:29px;margin:0 0 8px}.cta p{margin:0;color:#d7ddd9}.btn{display:inline-block;background:#fff;color:var(--dark);padding:12px 18px;border-radius:10px;font-weight:800}
+.footer{padding:30px 0 46px;color:var(--muted);font-size:12px}
+.small{font-size:12px;color:var(--muted)}.photo-note{font-size:11px;color:var(--muted);margin-top:10px}
+@media(max-width:980px){.intro-grid{grid-template-columns:1fr}.partner-grid{grid-template-columns:1fr 1fr}.quick{grid-template-columns:repeat(3,1fr)}.why{grid-template-columns:repeat(2,1fr)}.experiences{grid-template-columns:repeat(2,1fr)}.stay-grid,.taste-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.partner-grid{grid-template-columns:1fr}.navlinks{display:none}.hero{min-height:640px}.hero h1{font-size:40px}.price-card{min-width:0;width:100%}.hero-summary{width:100%}.quick,.why,.experiences,.stay-grid,.taste-grid,.keylist,.price-grid,.inc-grid,.reviews,.forwho{grid-template-columns:1fr}.story{grid-template-columns:1fr}.day button{grid-template-columns:70px 1fr 18px}.day .body{padding-left:18px}.day-media{grid-template-columns:1fr}.thumb{height:180px}.cta{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+<div class="wrap nav">
+  <div class="brand">ENVOY TOURS<small>Christian Heritage Tour · Internal Sales Page Prototype</small></div>
+  <nav class="navlinks">
+    <a href="#overview">개요</a><a href="#why">핵심 포인트</a><a href="#itinerary">일정</a><a href="#stay">숙박</a><a href="#partner">파트너 안내</a><a href="#info">여행정보</a>
+  </nav>
+  <div class="badge-review">Partner Preview</div>
+</div>
+</header>
+
+<section class="hero">
+<div class="hero-inner">
+  <div class="kicker">Georgia · Armenia · Christian Heritage</div>
+  <h1>조지아·아르메니아 기독교 역사 순례 12일</h1>
+  <div class="en">Georgia &amp; Armenia Christian Heritage Tour – 12 Days</div>
+  <p class="tagline">믿음의 오래된 길을 걷다 <span style="opacity:.8">· Walking the Ancient Path of Faith</span></p>
+  <div class="meta">
+    <span class="chip">11박 12일</span><span class="chip">2개국 집중</span><span class="chip">트빌리시 IN</span><span class="chip">예레반 OUT</span><span class="chip">No Shopping</span><span class="chip">Max. 24 Guests</span>
+  </div>
+  <div class="hero-bottom">
+    <div class="price-card">
+      <div class="price-label">예상 상품가 · 1인</div>
+      <div class="price">5,490,000원 <span class="status"></div>
+      <div class="price-note"><strong>(변동 가능)</strong><br>항공료, 환율, 호텔 및 현지 운영 조건에 따라 최종 상품가는 조정될 수 있습니다.</div>
+    </div>
+    <div class="hero-summary">
+      <b>성 니노의 조지아에서 조명자 그레고리와 아라랏산의 아르메니아까지</b>
+      <p>두 나라의 기독교 역사와 코카서스의 자연을 하나의 이야기로 연결한 12일간의 기독교 역사 순례.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="section white" id="overview">
+<div class="wrap">
+  
+  <h2>여행 한눈에 보기</h2>
+  
+  <div class="quick">
+    <div class="q"><div class="label">Duration</div><div class="value">11박 12일</div></div>
+    <div class="q"><div class="label">Countries</div><div class="value">Georgia + Armenia</div></div>
+    <div class="q"><div class="label">Route</div><div class="value">Tbilisi IN / Yerevan OUT</div></div>
+    <div class="q"><div class="label">Group</div><div class="value">Min 12 / Ideal 16–20 / Max 24</div></div>
+    <div class="q"><div class="label">Shopping</div><div class="value">쇼핑 중심 일정 없음</div></div>
+    <div class="q"><div class="label">Optional Tour</div><div class="value">강제 선택관광 없음</div></div>
+  </div>
+
+  <div style="height:26px"></div>
+  <div class="intro-grid">
+    <div class="intro-card">
+      <h3>상품 소개</h3>
+      <p>이 상품은 조지아와 아르메니아의 기독교 역사, 수도원과 대성당, 성 니노와 조명자 그레고리의 이야기, 아라랏산과 코카서스의 장엄한 자연을 하나의 여정으로 연결한 기독교 역사 순례 상품입니다.</p>
+      <p>조지아에서는 성 니노와 므츠헤타를 중심으로 조지아 기독교의 시작을 만나고, 카즈베기와 카헤티를 통해 코카서스의 자연과 조지아의 환대 문화를 경험합니다.</p>
+      <p>아르메니아에서는 가르니와 게가르드를 통해 고대 문화와 기독교 유산을 연결해 이해하고, 에치미아진, 코르비랍, 노라방크, 세반 호수로 이어지는 여정을 통해 세계 최초 기독교 국가의 신앙 유산과 아라랏산의 상징성을 만납니다.</p>
+    </div>
+    <div class="partner-card">
+      <h3>주요 대상</h3>
+      <p>한국 교회 단체</p>
+      <p>목회자 및 교역자 그룹</p>
+      <p>신학교 동문회 및 기독교 기관</p>
+      <p>기독교 역사와 문화에 관심 있는 일반 여행자</p>
+      <p><strong>상품 포지션</strong><br>중상급 프리미엄 실속형 · 소규모 그룹 중심</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="section" id="why">
+<div class="wrap">
+  <h2>Why This Journey</h2>
+  
+  <div class="why">
+    <div class="item"><div class="n">01</div><h3>성 니노에서 조명자 그레고리까지</h3><p>조지아와 아르메니아의 기독교 역사를 두 인물을 중심으로 하나의 이야기로 연결합니다.</p></div>
+    <div class="item"><div class="n">02</div><h3>코르비랍에서 마주하는 아라랏산</h3><p>조명자 그레고리의 이야기와 아라랏산의 상징성이 만나는 여정의 감정적 하이라이트입니다.</p></div>
+    <div class="item"><div class="n">03</div><h3>카즈베기와 게르게티의 압도적 풍경</h3><p>코카서스 산맥 속 교회와 자연이 만들어내는 대표 장면을 일정의 중심 경험으로 담습니다.</p></div>
+    <div class="item"><div class="n">04</div><h3>게가르드 성가 공연</h3><p>게가르드 수도원 특유의 공간감과 아르메니아 성가를 시그니처 경험으로 구성합니다.</p></div>
+    <div class="item"><div class="n">05</div><h3>한국 교회 고객을 위한 해설</h3><p>정교회와 아르메니아 사도교회 전통을 한국 기독교 고객의 눈높이에 맞춰 설명합니다.</p></div>
+  </div>
+
+  <div class="full-photo" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Gergeti_Trinity_Church_and_Mt._Kazbeg_01.jpg?width=1800')">
+    <div class="caption"><h3>코카서스 산맥 속의 신앙</h3><p>게르게티 성삼위 교회와 카즈베기 산맥은 이 상품을 한눈에 기억하게 만드는 대표 장면입니다.</p></div>
+  </div>
+  <div class="photo-note">Photo reference: Wikimedia Commons · Gergeti Trinity Church &amp; Mount Kazbeg</div>
+</div>
+</section>
+
+<section class="section white">
+<div class="wrap">
+  <h2>상품 콘셉트</h2>
+  <p class="lead">깊이는 있지만 어렵지 않고, 신앙적 의미와 여행의 감동이 함께 있는 기독교 역사 여행</p>
+  <div class="story"><div class="step">ACT 01</div><div><h3>성 니노와 조지아 기독교의 시작</h3><p>트빌리시와 므츠헤타에서 조지아 기독교의 뿌리를 만나고, 성 니노의 발자취를 따라 조지아 기독교의 시작을 이해합니다.</p></div></div>
+  <div class="story"><div class="step">ACT 02</div><div><h3>코카서스 산맥 속의 신앙</h3><p>카즈베기와 게르게티 성삼위 교회를 통해 장엄한 자연 속에 이어져 온 신앙의 흔적을 경험합니다.</p></div></div>
+  <div class="story"><div class="step">ACT 03</div><div><h3>성 니노의 유산과 조지아의 환대</h3><p>카헤티, 보드베, 시그나기와 알라자니 계곡에서 신앙의 유산과 조지아의 환대 문화를 함께 경험합니다.</p></div></div>
+  <div class="story"><div class="step">ACT 04</div><div><h3>두 기독교 국가를 잇는 길</h3><p>하그파트와 사나힌을 거쳐 조지아에서 아르메니아로 이어지는 기독교 유산의 흐름을 따라갑니다.</p></div></div>
+  <div class="story"><div class="step">ACT 05</div><div><h3>가르니에서 게가르드까지</h3><p>아르메니아 고대 문화와 기독교 유산을 함께 이해하고, 게가르드 성가 공연을 특별한 하이라이트로 경험합니다.</p></div></div>
+  <div class="story"><div class="step">ACT 06</div><div><h3>세계 최초 기독교 국가, 아르메니아</h3><p>에치미아진과 흐립시메 교회를 통해 아르메니아 기독교의 중심과 국가적 기독교화의 역사를 이해합니다.</p></div></div>
+  <div class="story"><div class="step">ACT 07</div><div><h3>조명자 그레고리와 아라랏산</h3><p>코르비랍에서 조명자 그레고리의 이야기와 아라랏산의 상징성이 만나는 여정의 하이라이트를 경험합니다.</p></div></div>
+  <div class="story"><div class="step">ACT 08</div><div><h3>세기를 넘어 보존된 신앙</h3><p>세반, 하그하르친, 마테나다란을 통해 오랜 신앙이 역사 속에서 어떻게 보존되고 전승되었는지 돌아봅니다.</p></div></div>
+</div>
+</section>
+
+<section class="section">
+<div class="wrap">
+  <h2>Signature Experiences</h2>
+  <p class="lead">성지를 보는 것에서 한 단계 더 나아가, 실제로 기억에 남는 경험을 상품의 경쟁력으로 구성합니다.</p>
+  <div class="experiences">
+    <div class="exp"><h3>Geghard Sacred Choral Performance</h3><p>게가르드 수도원 공간에서 경험하는 아르메니아 성가.</p></div>
+    <div class="exp"><h3>Local Evangelical Church Visit</h3><p>일정과 현지 협의에 따라 오늘날의 현지 기독교 공동체 방문.</p></div>
+    <div class="exp"><h3>Traditional Lavash Experience</h3><p>아르메니아 전통 라바쉬 문화를 직접 경험하는 시간.</p></div>
+    <div class="exp"><h3>Kakheti Food &amp; Wine Culture</h3><p>조지아의 환대 문화와 카헤티의 음식·와인 경험.</p></div>
+    <div class="exp"><h3>Journey Reflection</h3><p>마지막 밤, 참가자들이 각자의 여정을 돌아보고 나누는 시간.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="section white" id="itinerary">
+<div class="wrap">
+<h2>11박 12일 일정</h2>
+
+<div class="itinerary">
+  <div class="day"><button><span class="d">DAY 1</span><span class="title">인천 → 트빌리시 · 여정의 시작</span><span class="plus">+</span></button><div class="body">인천 출발, 트빌리시 도착, 환영 저녁식사, 코카서스 기독교 역사 소개</div></div>
+  <div class="day"><button><span class="d">DAY 2</span><span class="title">트빌리시 · 조지아 역사 속 기독교</span><span class="plus">+</span></button><div class="body">메테히 교회, 시오니 성당, 사메바 대성당, 트빌리시 구시가지</div></div>
+  <div class="day open"><button><span class="d">DAY 3</span><span class="title">므츠헤타 · 성 니노와 조지아 기독교의 시작</span><span class="plus">+</span></button><div class="body">즈바리 수도원, 스베티츠호벨리 대성당, 삼타브로 수도원<div class="day-media"><div class="thumb" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Svetitskhoveli_%282%29.jpg?width=800')"></div><div><b>Highlight</b><br>조지아 기독교의 중심 므츠헤타에서 성 니노의 이야기를 본격적으로 따라갑니다.</div></div></div></div>
+  <div class="day open"><button><span class="d">DAY 4</span><span class="title">카즈베기 · 코카서스 산맥 속의 신앙</span><span class="plus">+</span></button><div class="body">아나누리 성채, 진발리 호수, 게르게티 성삼위 교회, 카즈베기 숙박<div class="day-media"><div class="thumb" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Gergeti_Trinity_Church_and_Mt._Kazbeg_01.jpg?width=800')"></div><div><b>Highlight</b><br>코카서스 산맥과 게르게티 성삼위 교회가 만드는 이 상품의 대표 장면.</div></div></div></div>
+  <div class="day"><button><span class="d">DAY 5</span><span class="title">카헤티 · 성 니노의 유산과 조지아의 환대</span><span class="plus">+</span></button><div class="body">알라베르디 수도원, 보드베 수도원, 시그나기</div></div>
+  <div class="day"><button><span class="d">DAY 6</span><span class="title">조지아 → 아르메니아 · 두 기독교 국가를 잇는 길</span><span class="plus">+</span></button><div class="body">국경 이동, 하그파트·사나힌 수도원, 예레반 도착</div></div>
+  <div class="day open"><button><span class="d">DAY 7</span><span class="title">가르니 / 게가르드 · 가르니에서 게가르드까지</span><span class="plus">+</span></button><div class="body">가르니 신전, 게가르드 수도원, 라바쉬 체험, 아르메니아 성가 공연<div class="day-media"><div class="thumb" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Geghard_Monastery%2C_Geghard%2C_Armenia.jpg?width=800')"></div><div><b>Signature Experience</b><br>게가르드 수도원의 공간감과 아르메니아 성가를 함께 경험합니다.</div></div></div></div>
+  <div class="day"><button><span class="d">DAY 8</span><span class="title">예레반 / 에치미아진 · 세계 최초 기독교 국가</span><span class="plus">+</span></button><div class="body">에치미아진 대성당, 보물관 및 성창 유물, 흐립시메 교회</div></div>
+  <div class="day open"><button><span class="d">DAY 9</span><span class="title">코르비랍 / 노라방크 · 조명자 그레고리와 아라랏산</span><span class="plus">+</span></button><div class="body">코르비랍 수도원, 아라랏산 조망, 노라방크 수도원, 아레니 지역<div class="day-media"><div class="thumb" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Khor_Virap._Ararat.jpg?width=800')"></div><div><b>Emotional Highlight</b><br>조명자 그레고리의 이야기와 아라랏산의 상징성이 하나로 만나는 핵심 장면.</div></div></div></div>
+  <div class="day open"><button><span class="d">DAY 10</span><span class="title">세반 / 딜리잔 · 수도원 전통과 자연 속의 신앙</span><span class="plus">+</span></button><div class="body">세반 호수, 세바나방크 수도원, 하그하르친 수도원<div class="day-media"><div class="thumb" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Lake_Sevan_%285063530234%29.jpg?width=800')"></div><div><b>Scenic Highlight</b><br>아르메니아의 대표 자연경관과 수도원 전통을 함께 경험합니다.</div></div></div></div>
+  <div class="day"><button><span class="d">DAY 11</span><span class="title">예레반 · 세기를 넘어 보존된 신앙</span><span class="plus">+</span></button><div class="body">마테나다란, 예레반 주요 명소, 자유시간, 작별 저녁식사, 여정 리뷰 나눔</div></div>
+  <div class="day"><button><span class="d">DAY 12</span><span class="title">예레반 → 인천 · 여정 마무리</span><span class="plus">+</span></button><div class="body">공항 이동, 귀국</div></div>
+</div>
+</div>
+</section>
+
+<section class="section" id="stay">
+<div class="wrap">
+  <h2>Where We Stay</h2>
+  
+  <div class="stay-grid">
+    <div class="stay"><div class="img" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Tbilisi_City_view.jpg?width=1000')"></div><div class="body"><h3>Tbilisi</h3><p>4-Star Hotel or Equivalent</p></div></div>
+    <div class="stay"><div class="img" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Gergeti_Trinity_Church_and_Mt._Kazbeg_01.jpg?width=1000')"></div><div class="body"><h3>Kazbegi</h3><p>Mountain View / Premium Stay</p></div></div>
+    <div class="stay"><div class="img" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Yerevan_view_from_Cascade.jpg?width=1000')"></div><div class="body"><h3>Yerevan</h3><p>4-Star Hotel or Equivalent</p></div></div>
+  </div>
+</div>
+</section>
+
+<section class="section white">
+<div class="wrap">
+  <h2>Taste of Georgia &amp; Armenia</h2>
+  <p class="lead">일정 중 식사를 단순 포함사항이 아니라 지역 문화를 이해하는 콘텐츠로 보여줍니다.</p>
+  <div class="taste-grid">
+    <div class="taste"><div class="img" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Khinkali_551.jpg?width=1000')"></div><div class="body"><h3>Georgia</h3><p>Khinkali · Khachapuri · Mtsvadi 등 조지아 대표 음식</p></div></div>
+    <div class="taste"><div class="img" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Kakheti_vineyard.jpg?width=1000')"></div><div class="body"><h3>Kakheti</h3><p>조지아의 환대 문화와 전통 와인 문화</p></div></div>
+    <div class="taste"><div class="img" style="background-image:url('https://commons.wikimedia.org/wiki/Special:FilePath/Lavash.jpg?width=1000')"></div><div class="body"><h3>Armenia</h3><p>Lavash 체험과 아르메니아 현지 음식</p></div></div>
+  </div>
+</div>
+</section>
+
+<section class="section">
+<div class="wrap">
+  <h2>상품의 핵심 경쟁력</h2>
+  
+  <div class="keylist">
+    <div class="key"><h3>조지아에서 시작해 아르메니아에서 완성되는 여정</h3><p>성 니노와 조지아 기독교의 시작에서 출발해 에치미아진, 코르비랍, 아라랏산으로 이어지는 자연스러운 감정선을 만듭니다.</p></div>
+    <div class="key"><h3>성 니노와 조명자 그레고리를 중심으로 한 스토리</h3><p>두 인물을 중심으로 복잡한 지역의 기독교 역사를 쉽고 기억하기 좋은 방식으로 이해하도록 구성합니다.</p></div>
+    <div class="key"><h3>코카서스와 아라랏산을 담은 강력한 대표 장면</h3><p>상품 소개서, 웹사이트 상세 페이지, SNS 콘텐츠의 핵심 비주얼이자 홍보 이미지로 활용할 수 있습니다.</p></div>
+    <div class="key"><h3>게가르드 성가 공연을 통한 시그니처 경험</h3><p>게가르드 수도원 특유의 공간감과 성가의 울림은 일반적인 관광 일정과 구분되는 대표 경험이 됩니다.</p></div>
+    <div class="key"><h3>한국 교회 고객에게 맞춘 해설</h3><p>정교회와 아르메니아 사도교회의 예식, 이콘, 수도원 전통을 한국 기독교 고객이 이해하기 쉬운 언어로 설명합니다.</p></div>
+    <div class="key"><h3>엔보이의 현지 운영 기반을 통한 안정성</h3><p>가이드, 차량, 식당, 숙소, 동선 관리의 안정성을 높여 교회 단체 고객에게 신뢰할 수 있는 운영 경험을 제공합니다.</p></div>
+  </div>
+</div>
+</section>
+
+
+<section class="section white" id="partner">
+<div class="wrap">
+  <h2>For Travel &amp; Marketing Partners</h2>
+  
+  <div class="partner-grid">
+    <div class="partner-point"><h3>명확한 타깃</h3><p>교회 단체, 목회자 그룹, 신학교 동문회, 기독교 기관 등 모객 대상이 선명합니다.</p></div>
+    <div class="partner-point"><h3>차별화된 상품 스토리</h3><p>조지아와 아르메니아 2국에 집중하고 성 니노와 조명자 그레고리를 중심으로 하나의 스토리를 만듭니다.</p></div>
+    <div class="partner-point"><h3>현지 운영 안정성</h3><p>엔보이의 조지아·아르메니아 현지 운영 기반을 활용해 가이드, 차량, 식사, 숙박, 동선을 안정적으로 관리합니다.</p></div>
+    <div class="partner-point"><h3>강한 홍보 콘텐츠</h3><p>아라랏산, 카즈베기, 게가르드, 노라방크, 세반 호수 등 사진과 영상 활용도가 높은 대표 장면을 갖고 있습니다.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="section white" id="info">
+<div class="wrap">
+<h2>가격 및 여행 정보</h2>
+
+<div class="price-grid">
+  <div class="price-box">
+    <div class="small">예상 상품가 · 1인</div>
+    <div class="big">5,490,000원</div>
+    <p class="small">항공료, 환율, 호텔 및 현지 운영 조건에 따라 최종 상품가는 조정될 수 있습니다.</p>
+  </div>
+  <div class="cost-box">
+    <div class="line-item"><span>Single Supplement</span><strong>추후 안내</strong></div>
+    <div class="line-item"><span>Guide / Driver Tips</span><strong>최종 상품 조건에 따라 확정</strong></div>
+    <div class="line-item"><span>Travel Insurance</span><strong>최종 상품 조건에 따라 확정</strong></div>
+  </div>
+</div>
+
+<div style="height:22px"></div>
+<table class="info-table">
+  <tr><th>그룹 규모</th><td>최소 12명 / 권장 16–20명 / 최대 24명</td></tr>
+  <tr><th>항공</th><td>최종 출발 일정에 따라 확정</td></tr>
+  <tr><th>호텔</th><td>4성급 중심 / 카즈베기 프리미엄 숙박 검토</td></tr>
+  <tr><th>가이드</th><td>현지 전문 가이드 + 한국 교회 고객 맞춤 해설 지원</td></tr>
+  <tr><th>게가르드 성가 공연</th><td>포함 예정 · 현지 운영 조건에 따라 확정</td></tr>
+  <tr><th>현지 복음주의 교회 방문</th><td>요일 및 현지 교회 협의에 따라 선택 운영</td></tr>
+  <tr><th>쇼핑</th><td>쇼핑 중심 일정 없음</td></tr>
+  <tr><th>선택관광</th><td>강제 선택관광 없음</td></tr>
+  <tr><th>가격 포지션</th><td>중상급 프리미엄 실속형</td></tr>
+</table>
+</div>
+</section>
+
+<section class="section">
+<div class="wrap">
+  <h2>포함 / 불포함 사항</h2>
+  <p class="lead">현재는 Partner Preview 가정이며 최종 계약 및 가격 산정 후 확정합니다.</p>
+  <div class="inc-grid">
+    <div class="inc"><h3>Included</h3><p>왕복 국제항공</p><p>전 일정 호텔</p><p>일정상 식사</p><p>전용 차량</p><p>현지 전문 가이드</p><p>관광지 입장료</p><p>게가르드 성가 공연</p><p>여행자 보험</p></div>
+    <div class="inc"><h3>Not Included</h3><p>개인 경비</p><p>싱글룸 추가비</p><p>일부 음료 및 개인 주문</p><p>개인 매너팁</p><p>기타 일정 외 개인 비용</p></div>
+  </div>
+</div>
+</section>
+
+<section class="section white">
+<div class="wrap">
+  <h2>이런 분께 추천합니다</h2>
+  <div class="forwho">
+    <div class="who">교회 단체 여행을 계획하는 분</div>
+    <div class="who">목회자 및 교역자 그룹</div>
+    <div class="who">신학교 동문회 및 기독교 기관</div>
+    <div class="who">기독교 역사에 관심 있는 일반 여행자</div>
+    <div class="who">새로운 기독교 역사 여행지를 찾는 분</div>
+    <div class="who">자연과 문화를 함께 경험하고 싶은 분</div>
+  </div>
+</div>
+</section>
+
+
+
+<section class="section">
+<div class="wrap">
+  <div class="cta">
+    <div><h3>Product & Partnership Inquiry</h3><p>이 페이지는 Partner Preview 시안입니다. 일정, 가격, 체험, 숙박, 식사, 운영 조건에 대한 의견을 반영해 다음 버전으로 업데이트합니다.</p></div>
+    <a class="btn" href="javascript:void(0)">Feedback</a>
+  </div>
+</div>
+</section>
+
+<footer class="footer"><div class="wrap">Envoy Tours · Georgia &amp; Armenia Christian Heritage Tour</div></footer>
+
+<script>
+document.querySelectorAll('.day button').forEach(btn=>btn.addEventListener('click',()=>btn.parentElement.classList.toggle('open')));
+</script>
+</body>
+</html>
